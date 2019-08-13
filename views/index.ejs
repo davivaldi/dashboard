@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+ <body>
+     <div class="container">
+        <div class="row">
+            <h1>All the Rhinos in the CRASH </h1>
+            <a href="/rhino/new">
+                <button>Add a Rhino</button>
+            </a>
+            
+        </div>
+        <div class="row">
+        <% for (const rhino of rhinos) { %>
+            <div>
+               <h3>Name: <%= rhino.name %></h3> 
+                <h5> Age: <%= rhino.age %></h5>
+                <h5> Place of Birth: <%= rhino.placeBirth %></h5>
+                <%= rhino.createdAt %>
+                <a href="/rhino/<%= rhino._id %>">
+                    <button>View Rhino</button>
+                </a>
+                <% } %>
+            </div>
+                
+        </div>
+        </div>
+    </body>
+ </html>

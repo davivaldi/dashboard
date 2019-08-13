@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+ <body>
+     <div class="container">
+        <div class="row">
+            <h1>All the Information on <%= rhinos.name %>  in the CRASH </h1>
+            
+        </div>
+        <div class="row">
+            
+            <div>
+                <h3>Name: <%= rhinos.name %></h3> 
+                <h5> Age: <%= rhinos.age %></h5>
+                <h5> Place of Birth: <%= rhinos.placeBirth %></h5>
+                <%= rhinos.createdAt %>
+                <a href="/rhino/edit/<%= rhinos._id %>">
+                    <button>Edit <%= rhinos.name %></button>
+                </a>
+                
+            </div>
+            <a href="/rhino/new">
+                <button>Add a Rhino</button>
+            </a>
+            <a href="/">
+                <button>View Rhinos</button>
+            </a>
+            
+        </div>
+        </div>
+    </body>
+ </html>
